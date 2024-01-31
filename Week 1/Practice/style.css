@@ -1,0 +1,28 @@
+html {
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+div > div > button{
+    font-size: 30px;
+    padding: 10px 20px;
+}
+
+div > div > span {
+    font-size: 30px;
+}
+
+div > div {
+    padding: 30px;
+}
+
+.newMe {
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    padding: 0.2em;
+    cursor: pointer;
+}
