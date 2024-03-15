@@ -6,9 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order a Smoothie Now!</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&display=swap" rel="stylesheet">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-
+<main>
+    <div>
+        <div>
+            <div class="page-header">
+                <h1>MAKE YOUR OWN SMOOTHIE!</h1>
+            </div>
+            <div class="intro-paragraph">
+                <p>Sort through the various ingredients and create your perfect smoothie!</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <h2>Base Liquids</h2>
+                </div>
+                <div>
+                    <form>
+                        <div class="drinks apple-juice">
+                            <div>
+                                <img src="img/liquids/fruit-juices/apple-juice.jpg" alt="Apple Juice">
+                            </div>
+                            <figcaption>
+                                <input type="radio" id="orange-juice" name="base-liquid" value="orange-juice" required>
+                                <label for="orange-juice">Orange Juice</label><br>
+                            </figcaption>
+                        </div>
+                        <div class="drinks orange-juice">
+                            <div>
+                                <img src="img/liquids/fruit-juices/orange-juice.jpg" alt="Orange Juice">
+                            </div>
+                            <figcaption>
+                                <input type="radio" id="apple-juice" name="base-liquid" value="apple-juice" required>
+                                <label for="apple-juice">Apple Juice</label><br>
+                            </figcaption>
+                        </div>
+                        <div class="drinks pineapple-juice">
+                            <div>
+                                <img src="img/liquids/fruit-juices/pineapple-juice.jpg" alt="Pineapple Juice">
+                            </div>
+                            <figcaption>
+                                <input type="radio" id="pineapple-juice" name="base-liquid" value="pineapple-juice" required>
+                                <label for="pineapple-juice">Pineapple Juice</label><br>
+                            </figcaption>
+                        </div>
+                        <div class="drinks water">
+                            <div>
+                                <img src="img/liquids/water.jpg" alt="water">
+                            </div>
+                            <figcaption>
+                                <input type="radio" id="water" name="base-liquid" value="water" required>
+                                <label for="water">Water</label><br>
+                            </figcaption>
+                        </div>
+                        <div class="drinks milk">
+                            <div>
+                                <img src="img/liquids/milk.png" alt="Milk">
+                            </div>
+                            <figcaption>
+                                <input type="radio" id="milk" name="base-liquid" value="milk" required>
+                                <label for="milk">Milk</label><br>
+                            </figcaption>
+                        </div>
+                        <div class="drinks coconut-water">
+                            <div>
+                                <img src="img/liquids/coconut-water.png" alt="Coconut-water">
+                            </div>
+                            <figcaption>
+                                <input type="radio" id="coconut-water" name="base-liquid" value="coconut-water" required>
+                                <label for="coconut-water">Coconut Water</label><br>
+                            </figcaption>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 </body>
 </html>
