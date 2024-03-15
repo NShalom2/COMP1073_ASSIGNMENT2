@@ -8,6 +8,8 @@ main {
     font-family: "Kanit", sans-serif;
     background: #f2f0eb;
     height: 1080px;
+    border-left: 2px #ddddda solid;
+    border-right: 1px #ddddda solid;
 }
 
 .headers {
@@ -18,7 +20,7 @@ main {
 .page-header h1 {
     font-family: "Madimi One", sans-serif;
     margin-top: 0;
-    padding-top: 25px;
+    padding-top: 50px;
     font-size: 50px;
 }
 
