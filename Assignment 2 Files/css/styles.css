@@ -1,5 +1,5 @@
 body {
-    margin: 0 350px;
+    margin: 0 400px;
     top: 0;
     text-align: center;
 }
@@ -7,7 +7,6 @@ body {
 main {
     font-family: "Kanit", sans-serif;
     background: #f2f0eb;
-    height: 1080px;
     border-left: 2px #ddddda solid;
     border-right: 1px #ddddda solid;
 }
@@ -30,8 +29,9 @@ img {
     transition: 0.5s;
 }
 
-form {
+.base-liquids form {
     display: flex;
+    font-size: 18px;
 }
 
 .drinks {
@@ -42,4 +42,42 @@ form {
     align-content: center;
     justify-content: center;
     display: flex;
+}
+
+.fruits form, .sweeteners form, .thickeners form {
+    font-size: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fruits form div, .sweeteners form div {
+    padding: 20px;
+}
+
+.thickeners form div {
+    padding: 15px;
+}
+
+.final_choices {
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#submit {
+    width: 160px;
+    height: 80px;
+    background-color: lawngreen;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    font-family: "Madimi One", sans-serif;
+    font-size: 15px;
+}
+
+#submit:hover {
+    background-color: red;
+    cursor: pointer;
 }
