@@ -44,8 +44,10 @@ document.getElementById("submit").addEventListener("click", function(){
     }
 
     if (!selectedBaseLiquid){
+        window.scroll(0, 200);
         baseLiquidsError.textContent = "* You must select a base liquid";
     } else if(selectedFruits.length < 1) {
+        window.scroll(0, 300);
         fruitsError.textContent = "* You must select one or more fruits or vegetables";
     } else {
         if (selectedSweeteners.length === 0 + !selectedThickener){
@@ -66,6 +68,8 @@ document.getElementById("submit").addEventListener("click", function(){
     function userInputFunction(value){
         if (value.toLowerCase()[0] === 'y') {
             window.location.href = "smoothie.html";
+        } else {
+            location.reload();
         }
     }
 })
