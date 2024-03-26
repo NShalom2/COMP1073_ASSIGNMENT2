@@ -1,15 +1,25 @@
-const finalChoices = document.querySelector(".final_choices");
 const baseLiquidsError = document.querySelector(".base_liquids_error");
 const fruitsError = document.querySelector(".fruits_error");
+const orderNow = document.querySelector(".orderNow");
+const orderUp = document.querySelector(".orderUp");
+const button = document.getElementById("submit");
+const outputOrder = document.querySelector(".outputOrder");
+const imageDiv = document.querySelector(".imageDiv");
+const image = document.createElement("img");
+const goBack = document.querySelector(".goBack");
 
 let userInput;
-document.getElementById("submit").addEventListener("click", function(){
+let selectedBaseLiquid = "";
+let selectedFruits = [];
+let selectedSweeteners = [];
+let selectedThickener = "";
+
+goBack.addEventListener("click", function(){
+    location.reload();
+})
+button.addEventListener("click", function(){
 
     event.preventDefault();
-    let selectedBaseLiquid = "";
-    let selectedFruits = [];
-    let selectedSweeteners = [];
-    let selectedThickener = [];
 
     let baseLiquid = document.getElementsByName("base-liquid");
     for (let i = 0; i < baseLiquid.length; i++) {
@@ -50,26 +60,38 @@ document.getElementById("submit").addEventListener("click", function(){
         window.scroll(0, 300);
         fruitsError.textContent = "* You must select one or more fruits or vegetables";
     } else {
-        if (selectedSweeteners.length === 0 + !selectedThickener){
+        if (selectedSweeteners.length === 0 && !selectedThickener){
             userInput = prompt("You have selected " + selectedBaseLiquid + " as the base liquid and " + selectedFruits + " as the fruits or vegetables and no sweeteners or thickeners. Type 'Yes' if all looks good.");
-            userInputFunction(userInput)
-        } else if (selectedSweeteners.length > 0 + selectedThickener != null){
+            outputOrder.textContent = "Your " + selectedBaseLiquid + " Smoothie which contains " + selectedFruits + " with no sweeteners or thickeners has been served.";
+            userInputFunction(userInput);
+        } else if (selectedSweeteners.length > 0 && selectedThickener !== ""){
             userInput = prompt("You have selected " + selectedBaseLiquid + " as the base liquid, " + selectedFruits + " as the fruits or vegetables, " + selectedSweeteners + " as the sweetener(s) and " + selectedThickener + " as  the thickener. Type 'Yes' if all looks good.");
-            userInputFunction(userInput)
-        } else if (selectedSweeteners.length > 0 + !selectedThickener){
+            outputOrder.textContent = "Your " + selectedBaseLiquid + " Smoothie which contains " + selectedFruits + " fruits, " + selectedSweeteners + " sweetener and " + selectedThickener + " thickener has been served.";
+            userInputFunction(userInput);
+        } else if (selectedSweeteners.length > 0 && !selectedThickener){
             userInput = prompt("You have selected " + selectedBaseLiquid + " as the base liquid, " + selectedFruits + " as the fruits or vegetables, " + selectedSweeteners + " as the sweetener(s) and no thickener. Type 'Yes' if all looks good.");
-            userInputFunction(userInput)
-        } else if (selectedSweeteners.length === 0 + selectedThickener != null){
+            outputOrder.textContent = "Your " + selectedBaseLiquid + " Smoothie which contains " + selectedFruits + " , " + selectedSweeteners + " sweetener and no thickener has been served.";
+            userInputFunction(userInput);
+        } else if (selectedSweeteners.length === 0 && selectedThickener !== ""){
             userInput = prompt("You have selected " + selectedBaseLiquid + " as the base liquid, " + selectedFruits + " as the fruits or vegetables, no sweetener(s) and " + selectedThickener + " as  the thickener. Type 'Yes' if all looks good.");
-            userInputFunction(userInput)
+            outputOrder.textContent = "Your " + selectedBaseLiquid + " Smoothie which contains " + selectedFruits + " and " + selectedThickener + " thickener and no sweetener has been served.";
+            userInputFunction(userInput);
         }
+        console.log(selectedThickener);
+        console.log(selectedSweeteners);
     }
+
 
     function userInputFunction(value){
         if (value.toLowerCase()[0] === 'y') {
-            window.location.href = "smoothie.html";
-        } else {
+            orderNow.style.display = "none";
+            orderUp.style.display = "block";
+            image.setAttribute("src", `img/smoothies/${selectedBaseLiquid}.jpg`);
+            console.log(image);
+            imageDiv.appendChild(image);
+        } else if (value.toLowerCase()[0] !== 'y'){
             location.reload();
         }
     }
 })
+

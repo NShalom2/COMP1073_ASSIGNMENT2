@@ -7,8 +7,6 @@ body {
 main {
     font-family: "Kanit", sans-serif;
     background: #f2f0eb;
-    border-left: 2px #ddddda solid;
-    border-right: 1px #ddddda solid;
 }
 
 .headers {
@@ -23,6 +21,10 @@ main {
     font-size: 50px;
 }
 
+.intro-paragraph {
+    font-size: 20px;
+}
+
 img {
     height: 90px;
     border-radius: 50%;
@@ -32,6 +34,9 @@ img {
 .base-liquids form {
     display: flex;
     font-size: 18px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .drinks {
@@ -42,6 +47,7 @@ img {
     align-content: center;
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .fruits form, .sweeteners form, .thickeners form {
@@ -70,20 +76,66 @@ img {
 #submit {
     width: 160px;
     height: 80px;
-    background-color: lawngreen;
+    background-color: black;
     border: none;
     border-radius: 15px;
     margin-top: 30px;
     margin-bottom: 50px;
     font-family: "Madimi One", sans-serif;
     font-size: 15px;
+    transition: 0.3s;
+    color: white;
 }
 
 #submit:hover {
-    background-color: red;
+    background-color: darkgray;
     cursor: pointer;
+    transition: 0.3s;
+    color: black;
 }
 
 .base_liquids_error, .fruits_error {
     color: red;
+}
+
+.orderUp {
+    display: none;
+    height: 910px;
+}
+
+.orderUp h2 {
+    margin-top: 0;
+    padding: 40px 20px 20px 20px;
+    font-size: 50px;
+    font-family: "Madimi One", sans-serif;
+}
+
+.orderUp img {
+    border-radius: 0;
+    height: 450px;
+    padding-bottom: 50px;
+}
+
+.outputOrder {
+    font-size: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.goBack {
+    height: 70px;
+    width: 135px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-family: "Madimi One", sans-serif;
+    transition: 0.3s;
+}
+
+.goBack:hover {
+    cursor: pointer;
+    background-color: darkgray;
+    color: black;
+    transition: 0.3s;
 }

@@ -13,7 +13,7 @@
 </head>
 <body>
 <main>
-    <div>
+    <div class="orderNow">
         <div>
             <div class="page-header">
                 <h1>MAKE YOUR OWN SMOOTHIE!</h1>
@@ -57,15 +57,6 @@
                                 <label for="pineapple-juice">Pineapple Juice</label><br>
                             </figcaption>
                         </div>
-                        <div class="drinks water">
-                            <div>
-                                <img class="base-liquid-images" src="img/liquids/water.jpg" alt="water">
-                            </div>
-                            <figcaption>
-                                <input type="radio" id="water" name="base-liquid" value="Water" required>
-                                <label for="water">Water</label><br>
-                            </figcaption>
-                        </div>
                         <div class="drinks milk">
                             <div>
                                 <img class="base-liquid-images" src="img/liquids/milk.png" alt="Milk">
@@ -96,43 +87,43 @@
                     <form id="fruits">
                         <div>
                             <label for="strawberries">Strawberries</label>
-                            <input type="checkbox" id="strawberries" name="fruit" value=" Strawberries">
+                            <input type="checkbox" id="strawberries" name="fruit" value="Strawberries">
                         </div>
                         <div>
                             <label for="blueberries">Blueberries</label>
-                            <input type="checkbox" id="blueberries" name="fruit" value=" Blueberries">
+                            <input type="checkbox" id="blueberries" name="fruit" value="Blueberries">
                         </div>
                         <div>
                             <label for="banana">Banana</label>
-                            <input type="checkbox" id="banana" name="fruit" value=" Bananas">
+                            <input type="checkbox" id="banana" name="fruit" value="Bananas">
                         </div>
                         <div>
                             <label for="pineapple">Pineapple</label>
-                            <input type="checkbox" id="pineapple" name="fruit" value=" Pineapple">
+                            <input type="checkbox" id="pineapple" name="fruit" value="Pineapple">
                         </div>
                         <div>
                             <label for="spinach">Spinach</label>
-                            <input type="checkbox" id="spinach" name="fruit" value=" Spinach">
+                            <input type="checkbox" id="spinach" name="fruit" value="Spinach">
                         </div>
                         <div>
                             <label for="carrot">Carrot</label>
-                            <input type="checkbox" id="carrot" name="fruit" value=" Carrots">
+                            <input type="checkbox" id="carrot" name="fruit" value="Carrots">
                         </div>
                         <div>
                             <label for="avocado">Avocado</label>
-                            <input type="checkbox" id="avocado" name="fruit" value=" Avocado">
+                            <input type="checkbox" id="avocado" name="fruit" value="Avocado">
                         </div>
                         <div>
                             <label for="kale">Kale</label>
-                            <input type="checkbox" id="kale" name="fruit" value=" Kale">
+                            <input type="checkbox" id="kale" name="fruit" value="Kale">
                         </div>
                         <div>
                             <label for="cucumber">Cucumber</label>
-                            <input type="checkbox" id="cucumber" name="fruit" value=" Cucumber">
+                            <input type="checkbox" id="cucumber" name="fruit" value="Cucumber">
                         </div>
                         <div>
                             <label for="beet_root">Beet Root</label>
-                            <input type="checkbox" id="beet_root" name="fruit" value=" Beet Root">
+                            <input type="checkbox" id="beet_root" name="fruit" value="Beet Root">
                         </div>
                     </form>
                 </div>
@@ -145,15 +136,15 @@
                     <form id="sweeteners">
                         <div>
                             <label for="honey">Honey</label>
-                            <input type="checkbox" id="honey" name="sweetener" value=" Honey">
+                            <input type="checkbox" id="honey" name="sweetener" value="Honey">
                         </div>
                         <div>
                             <label for="maple_syrup">Maple Syrup</label>
-                            <input type="checkbox" id="maple_syrup" name="sweetener" value=" Maple Syrup">
+                            <input type="checkbox" id="maple_syrup" name="sweetener" value="Maple Syrup">
                         </div>
                         <div>
                             <label for="date">Dates</label>
-                            <input type="checkbox" id="date" name="sweetener" value=" Dates">
+                            <input type="checkbox" id="date" name="sweetener" value="Dates">
                         </div>
                     </form>
                 </div>
@@ -166,15 +157,15 @@
                     <form id="thickeners">
                         <div>
                             <label for="yogurt">Yogurt</label>
-                            <input type="radio" id="yogurt" name="thickener" value=" Yogurt">
+                            <input type="radio" id="yogurt" name="thickener" value="Yogurt">
                         </div>
                         <div>
                             <label for="frozen_fruits">Frozen Fruits</label>
-                            <input type="radio" id="frozen_fruits" name="thickener" value=" Frozen Fruits">
+                            <input type="radio" id="frozen_fruits" name="thickener" value="Frozen Fruits">
                         </div>
                         <div>
                             <label for="oats">Oats</label>
-                            <input type="radio" id="oats" name="thickener" value=" Oats">
+                            <input type="radio" id="oats" name="thickener" value="Oats">
                         </div>
                     </form>
                 </div>
@@ -184,6 +175,23 @@
             <button id="submit">Submit Your Order</button>
         </div>
     </div>
+    <div class="orderUp">
+        <div>
+            <h2>Your order is up!</h2>
+        </div>
+        <div>
+            <div class="imageDiv">
+
+            </div>
+            <div>
+                <p class="outputOrder"></p>
+            </div>
+        </div>
+        <div>
+            <button class="goBack">Go Back</button>
+        </div>
+    </div>
+
 </main>
 </body>
 </html>
