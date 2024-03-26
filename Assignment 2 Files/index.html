@@ -5,6 +5,7 @@
     <meta name="description" content="Assignment 2 website. Create a smoothie">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order a Smoothie Now!</title>
+    <!-- Stylesheet used in Website -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,23 +14,31 @@
 </head>
 <body>
 <main>
+    <!-- Order Now Section -->
     <div class="orderNow">
         <div>
+            <!-- Page header -->
             <div class="page-header">
                 <h1>MAKE YOUR OWN SMOOTHIE!</h1>
             </div>
+            <!-- Introductory paragraph -->
             <div class="intro-paragraph">
                 <p>Sort through the various ingredients and create your perfect smoothie!</p>
             </div>
         </div>
         <div>
+            <!-- Base Liquids Section -->
             <div>
                 <div class="headers">
                     <h2>Base Liquids</h2>
                 </div>
+                <!-- Error message for base liquids when it's left empty -->
                 <p class="base_liquids_error"></p>
                 <div class="base-liquids">
+                    <!-- Form for selecting base liquids -->
                     <form id="base_liquids">
+                        <!-- Base liquid option choices -->
+                        <!-- Each option includes an image and a radio button. Yu can only select one of the choices-->
                         <div class="drinks apple-juice">
                             <div>
                                 <img class="base-liquid-images" src="img/liquids/fruit-juices/apple-juice.jpg" alt="Apple Juice">
@@ -78,13 +87,18 @@
                     </form>
                 </div>
             </div>
+            <!-- Fruits or Vegetables Section -->
             <div>
                 <div class="headers">
                     <h2>Fruits or Vegetables</h2>
                 </div>
                 <div class="fruits">
+                    <!-- Error message for fruits or vegetables when left empty -->
                     <span class="fruits_error"></span>
+                    <!-- Form for fruits or vegetables -->
                     <form id="fruits">
+                        <!-- Fruit options -->
+                        <!-- Each option includes a label and a checkbox, and you can select as many choices as you want -->
                         <div>
                             <label for="strawberries">Strawberries</label>
                             <input type="checkbox" id="strawberries" name="fruit" value="Strawberries">
@@ -128,12 +142,16 @@
                     </form>
                 </div>
             </div>
+            <!-- Sweeteners Section -->
             <div>
                 <div class="headers">
                     <h2>Sweeteners (Optional)</h2>
                 </div>
                 <div class="sweeteners">
+                    <!-- Form for selecting sweeteners -->
                     <form id="sweeteners">
+                        <!-- Sweetener options -->
+                        <!-- Each option includes a label and a checkbox, and you can select as many as you want-->
                         <div>
                             <label for="honey">Honey</label>
                             <input type="checkbox" id="honey" name="sweetener" value="Honey">
@@ -149,12 +167,16 @@
                     </form>
                 </div>
             </div>
+            <!-- Thickener Section -->
             <div class="thickeners">
                 <div class="headers">
                     <h2>Thickener (Optional)</h2>
                 </div>
+                <!-- Form for selecting a thickener -->
                 <div>
                     <form id="thickeners">
+                        <!-- Thickener options -->
+                        <!-- Each option includes a label and a radio button which means you can only select one of the choices-->
                         <div>
                             <label for="yogurt">Yogurt</label>
                             <input type="radio" id="yogurt" name="thickener" value="Yogurt">
@@ -171,10 +193,12 @@
                 </div>
             </div>
         </div>
+        <!-- Submit Button -->
         <div>
             <button id="submit">Submit Your Order</button>
         </div>
     </div>
+    <!-- Order Up Section that displays after you click submit -->
     <div class="orderUp">
         <div>
             <h2>Your order is up!</h2>
@@ -187,6 +211,7 @@
                 <p class="outputOrder"></p>
             </div>
         </div>
+        <!-- This button takes you back to the first order page  -->
         <div>
             <button class="goBack">Go Back</button>
         </div>
