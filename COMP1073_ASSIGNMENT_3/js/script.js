@@ -1,16 +1,13 @@
 const searchString = document.querySelector(".search");
 const form = document.querySelector("form");
-const newSection = document.querySelector(".div-1");
+const section = document.querySelector(".section");
 
 form.addEventListener("submit", submit);
 
 function submit(event){
-    console.log("Form Submitted")
     event.preventDefault();
 
     let url = `https://restcountries.com/v3.1/name/${searchString.value}`;
-
-    console.log(url);
 
     fetch(url).then(result => {
         return result.json();
@@ -20,16 +17,30 @@ function submit(event){
 }
 
 function printResults(json){
-    console.log(json);
-
-    const countryName = document.createElement("h1");
-    const countryCapital = document.createElement("p");
-    const countryFlag = document.createElement("img");
-    const countryContinent = document.createElement("p");
-
+    const newSection = document.createElement("article");
     while (newSection.firstChild) {
         newSection.removeChild(newSection.firstChild);
     }
+    for(let i=0; i<json.length; i++) {
+        const countryName = document.createElement("h1");
+        const countryCapital = document.createElement("p");
+        const countryFlag = document.createElement("img");
+        const countryContinent = document.createElement("p");
 
+        countryName.textContent = `${searchString.value}`;
 
+        countryCapital.textContent = `Country Capital: ${json[i].capital}`;
+
+        countryContinent.textContent = `Country Continent: ${json[i].continents}`
+
+        countryFlag.src =`${json[i].flags.png}`;
+        countryFlag.alt = `${searchString.value} Flag`;
+
+        newSection.appendChild(countryName);
+        newSection.appendChild(countryCapital);
+        newSection.appendChild(countryContinent);
+        newSection.appendChild(countryFlag);
+
+        section.appendChild(newSection);
+    }
 }
