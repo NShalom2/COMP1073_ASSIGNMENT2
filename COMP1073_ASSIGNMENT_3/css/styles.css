@@ -24,11 +24,27 @@ input {
     font-size: 25px;
 }
 
-body {
+main {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 img {
-    height: 50px;
+    height: 150px;
+}
+
+article {
+    padding: 30px;
+    background-color: #ddd;
+}
+
+.documentation {
+    font-size: 45px;
+    display: block;
+    margin-top: 450px;
+    text-align: center;
+}
+
+.documentation a {
+    color: blue;
 }
