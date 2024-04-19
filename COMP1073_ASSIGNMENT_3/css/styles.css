@@ -40,11 +40,11 @@ article {
 
 .documentation {
     font-size: 45px;
-    display: block;
     margin-top: 450px;
     text-align: center;
 }
 
 .documentation a {
+    display: block;
     color: blue;
 }
